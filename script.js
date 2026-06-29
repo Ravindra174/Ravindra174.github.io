@@ -27,25 +27,7 @@ fadeElements.forEach((element) => {
 });
 
 
-// Smooth scrolling for same-page menu links
-
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const target = document.querySelector(this.getAttribute("href"));
-
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
-  });
-});
-
-
-// Header shadow effect while scrolling
+// Header shadow while scrolling
 
 const header = document.querySelector(".header");
 
@@ -56,3 +38,17 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+
+// Contact form placeholder message
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    alert("Thank you for your message. This contact form will be connected to email service soon.");
+    contactForm.reset();
+  });
+}
