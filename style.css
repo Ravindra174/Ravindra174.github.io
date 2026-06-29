@@ -243,12 +243,22 @@ body {
   background: #0b1728;
 }
 
+.dark-section {
+  max-width: 100%;
+  background: #0b1728;
+}
+
 .dark-section .section-label,
 .dark-section h2,
 .dark-section .cards {
+  width: 100%;
   max-width: 1180px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.dark-section .section-label {
+  display: block;
 }
 
 .cards {
@@ -404,5 +414,23 @@ footer {
   .profile-image {
     width: 160px;
     height: 160px;
+
+    /* Smooth Fade Animation */
+
+.fade-item {
+  opacity: 0;
+  transform: translateY(35px);
+  filter: blur(6px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease,
+    filter 1s ease;
+}
+
+.fade-item.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
   }
 }
