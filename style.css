@@ -511,19 +511,19 @@ footer {
 
 .about-text p{
 
-    font-size:20px;
-
+    font-size:19px;
     color:#cbd5e1;
-
     line-height:2;
-
     margin-bottom:22px;
 
     text-align:justify;
 
-  
+    hyphens:none;
+    -webkit-hyphens:none;
+    -ms-hyphens:none;
 
-    hyphens:auto;
+    word-break:normal;
+    overflow-wrap:break-word;
 
 }
 
